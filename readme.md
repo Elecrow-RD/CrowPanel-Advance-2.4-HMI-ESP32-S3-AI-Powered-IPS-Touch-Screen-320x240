@@ -27,7 +27,7 @@ V1.1 upgraded, optimized the amplifier circuit, better sound quality, and use IO
 
 **Version 1.2** 
 
-Updated the button components.
+Only the button component has been updated. All other hardware and I/O pins remain the same as in the previous version.
 
 ### 3, product information
 
@@ -37,7 +37,7 @@ Updated the button components.
 | System Memory                                | 512KB SRAM、8M PSRAM                                         |
 | Memory                                       | 16M Flash，384KB ROM                                         |
 | Development Language                         | MicroPython、C/C++                                           |
-| Development Environment                      | ESP-IDF、Arduino IDE、LVGL、PlatformIO、Micro Python         |
+| Development Environment                      | ESP-IDF、Arduino IDE、LVGL、PlatformIO、MicroPython         |
 | **Screen**                                   |                                                              |
 | Size                                         | 2.4 inch                                                     |
 | Diver IC                                     | ST7789                                                       |
