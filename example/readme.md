@@ -54,5 +54,4 @@ https://www.youtube.com/playlist?list=PLwh4PlcPx2Gfrtm7TmlARyF4ccTmIy-gK
 
 ### Product purchase link:
 
-https://www.elecrow.com/crowpanel-advance-2-4-hmi-esp32-320x240-ips-ai-display-artificial-intelligent-touchscreen-1.html
-
+https://www.elecrow.com/crowpanel-advance-2-8-hmi-esp32-ai-display-320x240-artificial-ips-intelligent-touchscreen.html
