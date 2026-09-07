@@ -1,0 +1,32 @@
+.pio/build/crowpanel_24_csi_receiver/FrameworkArduino/esp32-hal-periman.c.o: \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-periman.c \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-log.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/qio_opi/include/sdkconfig.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_timer/include/esp_timer.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/newlib/platform_include/stdio.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_common/include/esp_err.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_common/include/esp_compiler.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_hw_support/include/esp_etm.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/soc/esp32s3/include/soc/soc.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_common/include/esp_assert.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_common/include/esp_bit_defs.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/soc/esp32s3/register/soc/reg_base.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_log.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_rom/include/esp_rom_sys.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/soc/esp32s3/include/soc/reset_reasons.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/soc/esp32s3/include/soc/soc_caps.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_log_config.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_log_level.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_log_color.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_log_buffer.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_log_timestamp.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_log_write.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_log_format.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_log_args.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_common/include/esp_macros.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_common/include/esp_assert.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_log_attr.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_common/include/esp_attr.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_private/log_attr.h \
+ E:/PlatformIO-Core/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-periman.h
