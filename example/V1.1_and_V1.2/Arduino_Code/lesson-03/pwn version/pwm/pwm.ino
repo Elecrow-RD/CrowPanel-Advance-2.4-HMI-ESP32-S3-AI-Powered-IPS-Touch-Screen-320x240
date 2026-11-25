@@ -3,9 +3,7 @@
 
 /*---------------------------------------------------------------
  * Visible PWM backlight test
- * The sketch draws a duty-cycle screen and progress bar while changing
- * GPIO38. This gives a visible result even if the backlight brightness
- * change is subtle on a particular board.
+ * The sketch holds GPIO38 at full brightness and draws the duty screen once.
  *--------------------------------------------------------------*/
 
 // Provides LCD drawing so the test result is visible.
@@ -20,8 +18,7 @@ const int pwmResolution = 8;
 // GPIO38 controls the display backlight on this lesson board.
 const int pwmPin = 38;
 
-// Records whether LEDC PWM was successfully attached to GPIO38.
-bool pwmAttached = false;
+const int fullDuty = 255;
 
 /**
  * @brief Draw the current PWM duty cycle on the LCD.
@@ -53,27 +50,6 @@ void drawDutyScreen(int dutyCycle) {
 }
 
 /**
- * @brief Apply the duty cycle to GPIO38 and update the LCD display.
- *
- * If LEDC cannot attach to the pin, the fallback keeps the backlight enabled
- * and still updates the on-screen progress bar so the lesson has a result.
- *
- * @param dutyCycle Current PWM duty cycle, from 0 to 255.
- * @return None.
- */
-void applyBacklightDuty(int dutyCycle) {
-  if (pwmAttached) {
-    ledcWrite(pwmPin, dutyCycle);
-  } else {
-    digitalWrite(pwmPin, HIGH);
-  }
-
-  drawDutyScreen(dutyCycle);
-  Serial.print("PWM duty = ");
-  Serial.println(dutyCycle);
-}
-
-/**
  * @brief Initialize the LCD and attach PWM output to the backlight pin.
  *
  * Arduino calls this function once after reset. The backlight is first forced
@@ -90,39 +66,19 @@ void setup() {
 
   gfx.init();
   gfx.setRotation(1);
-  drawDutyScreen(255);
-
-  pwmAttached = ledcAttach(pwmPin, pwmFreq, pwmResolution);
-  if (pwmAttached) {
-    ledcWrite(pwmPin, 255);
-    Serial.println("PWM backlight test started.");
-  } else {
-    Serial.println("PWM attach failed; showing LCD duty screen only.");
+  bool pwmActive = ledcAttach(pwmPin, pwmFreq, pwmResolution) && ledcWrite(pwmPin, fullDuty);
+  if (!pwmActive) {
+    pinMode(pwmPin, OUTPUT);
+    digitalWrite(pwmPin, HIGH);
+    Serial.println("PWM setup failed; backlight held high.");
+  }
+  drawDutyScreen(fullDuty);
+  Serial.println("Duty screen drawn.");
+  if (pwmActive) {
+    Serial.printf("PWM high counts: %lu / %u\n", (unsigned long)ledcRead(pwmPin), 1U << pwmResolution);
   }
 }
 
-/**
- * @brief Sweep the display backlight brightness up and down.
- *
- * Arduino calls this function repeatedly after setup() finishes. The duty
- * cycle moves between dark and bright levels while the LCD displays the
- * current value.
- *
- * @param None.
- * @return None.
- */
 void loop() {
-  for (int dutyCycle = 0; dutyCycle <= 255; dutyCycle += 15) {
-    applyBacklightDuty(dutyCycle);
-    delay(120);
-  }
-
-  delay(300);
-
-  for (int dutyCycle = 255; dutyCycle >= 0; dutyCycle -= 15) {
-    applyBacklightDuty(dutyCycle);
-    delay(120);
-  }
-
-  delay(300);
+  delay(1000);
 }
